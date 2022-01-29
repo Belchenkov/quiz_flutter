@@ -74,13 +74,15 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Quiz App'),
         ),
-        body: _questionIndex < _questions.length
+        body: Center(
+          child: _questionIndex < _questions.length
             ? Quiz(
                 answerQuestion: _answerQuestion,
                 questions: _questions,
                 questionIndex: _questionIndex
             )
             : Result(_totalScore, _resetQuiz),
+        )
       ),
     );
   }
