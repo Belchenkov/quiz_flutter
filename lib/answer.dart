@@ -11,9 +11,11 @@ class Answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.all(10),
-      child: RaisedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+          foregroundColor: MaterialStateProperty.all(Colors.white),
+        ),
         child: Text(answerText),
         onPressed: selectHandler,
       )
